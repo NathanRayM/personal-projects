@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: Michroma;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  text-align: center;
+  background: radial-gradient(
+    ellipse 100% 100% at center 160px,
+    #619a85,
+    #244c58
+  );
+}
+
+.main-container {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+}
+
+label {
+  text-align: center;
+  color: white;
+}
+
+.inputfield {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Removing the up down arrows from the input
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"] {
+  appearance: textfield;
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #57bf93;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #66c599;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  width: 300px;
+  object-fit: contain;
+}
+
+h1 {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 45%;
+  color: white;
+}
+
+.pswrdMsg {
+  color: white;
+}
+
+.error {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}

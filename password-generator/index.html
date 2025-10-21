@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <img class="logo" src="images/passwordGen1.svg" alt="" />
+      <h1>Password Generator</h1>
+    </header>
+    <main class="main-container">
+      <label for="" numInput>Enter the needed password length</label>
+      <input
+        class="inputfield"
+        id="numInput"
+        type="number"
+        placeholder="Enter a number"
+        min="5"
+        max="20"
+      />
+
+      <button id="button">Generate Password</button>
+      <p class="pswrdMsg" id="newPswrd"></p>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
