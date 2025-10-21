@@ -13,9 +13,7 @@ A simple web app that generates secure, random passwords based on user-specified
 - Responsive design for desktop and mobile
 - Error handling for invalid input
 
-[Password Generator](./password-generator)
-[Live](https://NathanRayM.github.io/personal-projects/password-generator/)
-[Repo](https://github.com/NathanRayM/personal-projects)
+[Project Folder](./password-generator) | [Live Demo](https://NathanRayM.github.io/personal-projects/password-generator/) | [Repo](https://github.com/NathanRayM/personal-projects)
 
 ## Tech Stack
 
