@@ -1,10 +1,16 @@
-# Personal Projects
+# 💻 Personal Projects
 
 This repository contains my personal web development projects. These projects are created for practice, experimentation, and to showcase my skills in HTML, CSS, and JavaScript.
 
-## Projects
+---
 
-### Password Generator
+## 🔐 Password Generator
+
+**Tech Stack:** HTML | CSS | JavaScript
+
+<p align="center">
+  <img src="thumbnails/password-generator-thumb.png" alt="Password Generator" width="600">
+</p>
 
 A simple web app that generates secure, random passwords based on user-specified length. Features include:
 
@@ -15,21 +21,25 @@ A simple web app that generates secure, random passwords based on user-specified
 
 [Project Folder](./password-generator) | [Live Demo](https://NathanRayM.github.io/personal-projects/password-generator/) | [Repo](https://github.com/NathanRayM/personal-projects)
 
-### Magic 8 Ball Game
+---
+
+## 🎱 Magic 8 Ball Game
+
+**Tech Stack:** HTML | CSS | JavaScript
+
+<p align="center">
+  <img src="thumbnails/magic-eight-ball-thumb.png" alt="Magic 8 Ball Game" width="600">
+</p>
 
 A fun, interactive web app built with HTML, CSS, and JavaScript. Inspired by the classic fortune-telling toy.
 
-- Interactive Input – Type a question and receive a random yes/no-style answer.
-- Realistic 8-Ball Design: Inner circle gradients and shadows simulate depth and lighting.
-- Responsive design for desktop and mobile.
+- Interactive input – type a question and receive a random yes/no-style answer
+- Realistic 8-Ball design: inner circle gradients and shadows simulate depth and lighting
+- Responsive design for desktop and mobile
 
 [Project Folder](./magic-8-ball-game) | [Live Demo](https://NathanRayM.github.io/personal-projects/magic-8-ball-game/) | [Repo](https://github.com/NathanRayM/personal-projects)
 
-## Tech Stack
-
-![HTML](https://img.shields.io/badge/HTML5-orange)
-![CSS](https://img.shields.io/badge/CSS3-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
+---
 
 ## License
 
