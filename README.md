@@ -15,6 +15,16 @@ A simple web app that generates secure, random passwords based on user-specified
 
 [Project Folder](./password-generator) | [Live Demo](https://NathanRayM.github.io/personal-projects/password-generator/) | [Repo](https://github.com/NathanRayM/personal-projects)
 
+### Magic 8 Ball Game
+
+A fun, interactive web app built with HTML, CSS, and JavaScript. Inspired by the classic fortune-telling toy.
+
+- Interactive Input – Type a question and receive a random yes/no-style answer.
+- Realistic 8-Ball Design: Inner circle gradients and shadows simulate depth and lighting.
+- Responsive design for desktop and mobile.
+
+[Project Folder](./magic-8-ball-game) | [Live Demo](https://NathanRayM.github.io/personal-projects/magic-8-ball-game/) | [Repo](https://github.com/NathanRayM/personal-projects)
+
 ## Tech Stack
 
 ![HTML](https://img.shields.io/badge/HTML5-orange)
