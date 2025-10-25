@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>The Magic Eight Ball Game</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <img class="logo" src="images/logo3.png" alt="" />
+    </header>
+    <main class="main-container">
+      <label for="question">How To Play The Game</label>
+      <ul class="instructions">
+        <li>Type your question</li>
+        <li>Click the answer button</li>
+        <li>Click the eight ball to reset the game</li>
+      </ul>
+      <input
+        autocomplete="off"
+        required
+        type="text"
+        name="question"
+        id="question-input"
+        placeholder="Type your question here"
+      />
+      <div class="eight-ball">
+        <div class="inner-circle">
+          <span class="answerMsg">8 </span>
+        </div>
+      </div>
+      <button class="button" disabled>Get An Answer</button>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
