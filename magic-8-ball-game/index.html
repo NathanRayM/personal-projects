@@ -13,10 +13,15 @@
     <title>The Magic Eight Ball Game</title>
   </head>
   <body>
+    <!-- Begin Header Section-->
     <header class="main-header">
       <img class="logo" src="images/logo3.png" alt="" />
     </header>
+    <!--End Header Section-->
+
+    <!-- Begin Main Container-->
     <main class="main-container">
+      <!-- Begin Input And Instructions-->
       <label for="question">How To Play The Game</label>
       <ul class="instructions">
         <li>Type your question</li>
@@ -31,13 +36,21 @@
         id="question-input"
         placeholder="Type your question here"
       />
+      <!--End Input And Instructions-->
+
+      <!--Begin Eight Ball-->
       <div class="eight-ball">
         <div class="inner-circle">
           <span class="answerMsg">8 </span>
         </div>
       </div>
+      <!-- End Eight Ball-->
+
+      <!--Begin Buttton-->
       <button class="button" disabled>Get An Answer</button>
+      <!--End Button-->
     </main>
+    <!--End Main Container-->
     <script src="main.js"></script>
   </body>
 </html>

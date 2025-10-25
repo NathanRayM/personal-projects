@@ -137,7 +137,7 @@ input[type="text"]:focus {
 /* --- Answer Message --- */
 .answerMsg {
   color: black;
-  font-size: clamp(2rem, 10vw, 6rem);
+  font-size: clamp(5rem, 10vw, 6rem);
   font-weight: 500;
 }
 
