@@ -1,0 +1,333 @@
+/*=== Reset ===*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/*=== CSS Custom Variables ===*/
+:root {
+  --body-background: rgb(229, 231, 235);
+  --white-primary: rgba(255, 255, 255, 0.95);
+  --grey-secondary: rgba(255, 255, 255, 0.65);
+  --grey-tertiary: rgba(255, 255, 255, 0.45);
+  --grey-disabled: rgba(255, 255, 255, 0.25);
+  --playlist-active-bg: rgba(255, 255, 255, 0.12);
+  --dark-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  --slider-active-background: rgba(254, 180, 123, 0.8);
+
+  /*== Gradient Colors ==*/
+  --player-background: linear-gradient(
+    180deg,
+    rgb(74, 88, 117) 0%,
+    rgb(95, 111, 143) 50%,
+    rgb(120, 138, 170) 100%
+  );
+  --playlist-background: linear-gradient(
+    180deg,
+    rgb(120, 138, 170) 0%,
+    rgb(95, 111, 143) 50%,
+    rgb(74, 88, 117) 100%
+  );
+  --button-background: radial-gradient(
+    circle at top,
+    rgb(139, 157, 187),
+    rgb(120, 138, 170)
+  );
+
+  /*=== CSS Custom Font Weights ===*/
+  --font-weight-light: 400;
+  --font-weight-normal: 500;
+  --font-weight-bold: 600;
+}
+
+/*=== General Styles ===*/
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--body-background);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/*==== Custom CSS ====*/
+
+/*== Now Playing Section ==*/
+.player__section {
+  width: 23.4375rem;
+  padding: 2rem;
+  background: var(--player-background);
+  border-radius: 0.5rem;
+  box-shadow: var(--dark-box-shadow);
+}
+.player__now-playing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.player__artwork {
+  width: 80%;
+  border-radius: 50%;
+  border: 4px solid var(--grey-secondary);
+  box-shadow: var(--dark-box-shadow);
+  margin-bottom: 2rem;
+}
+
+.player__title {
+  color: var(--white-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.player__artist {
+  color: var(--grey-secondary);
+}
+
+/*== Transport Controls ==*/
+.player__controls {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.fa-solid {
+  font-size: 1.5rem;
+  color: var(--grey-secondary);
+  cursor: pointer;
+}
+
+.fa-solid.fa-play,
+.fa-solid.fa-pause {
+  font-size: 3rem;
+  color: var(--white-primary);
+}
+
+/*== Playback Progress ==*/
+.player__progress {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.player__time {
+  display: flex;
+  justify-content: space-between;
+  color: var(--white-primary);
+  margin-bottom: 0.5rem;
+}
+
+#progress {
+  -webkit-appearance: none;
+  height: 6px;
+  background: var(--playlist-active-bg);
+  margin: 16px 0;
+  cursor: pointer;
+}
+
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--white-primary);
+  border-radius: 50%;
+  box-shadow: var(--dark-box-shadow);
+}
+
+/*=== A/B Toggle Control ===*/
+.player__ab-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.select__ab {
+  width: 50px;
+  height: 20px;
+  background: var(--playlist-active-bg);
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.5s ease;
+}
+
+.select__ab.on {
+  background: var(--slider-active-background);
+}
+
+.select__ab .inner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: var(--button-background);
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: left 0.2s ease;
+  border: 2px solid var(--grey-secondary);
+}
+
+.select__ab.on .inner {
+  left: calc(100% - 18px);
+}
+
+.player__ab-status {
+  color: var(--white-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/*=== Playlist ===*/
+.player__playlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: var(--playlist-background);
+  border-radius: 0.5rem;
+  box-shadow: var(--dark-box-shadow);
+}
+
+.player__playlist.hidden {
+  display: none;
+}
+
+.player__playlist--button .fa-regular {
+  font-size: 2rem;
+  color: var(--white-primary);
+  cursor: pointer;
+}
+
+.player__playlist-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 0.5rem;
+}
+
+.player__playlist-item {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 4rem;
+  background-color: var(--grey-tertiary);
+  border-radius: 0.5rem;
+  box-shadow: var(--dark-box-shadow);
+  cursor: pointer;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease,
+    border-left 0.25s ease;
+}
+
+.playlist__item--info {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.playlist-info-title {
+  font-size: 0.85rem;
+  font-weight: var(--font-weight-bold);
+}
+
+.playlist-info-artist {
+  font-size: 0.75rem;
+}
+
+.player-info-duration {
+  font-size: 0.75rem;
+}
+
+.playlist-image {
+  width: 2.5rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+}
+
+.playlist__item--left {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/*=== Hover And Focus States ===*/
+.player__playlist-item:hover {
+  background-color: var(--grey-secondary);
+}
+
+.player__playlist-item.active {
+  border-left: 7px solid var(--slider-active-background);
+}
+
+.fa-solid:active {
+  color: var(--white-primary);
+}
+
+/*=== Media Query 820px ===*/
+@media (min-width: 51.25rem) {
+  main {
+    flex-direction: row;
+  }
+
+  .player__playlist {
+    width: 23.4375rem;
+  }
+
+  .player__playlist--button {
+    display: inline-block;
+
+    transform: rotate(-90deg);
+  }
+
+  .fa-regular.fa-circle-down {
+    display: inline-block;
+  }
+}

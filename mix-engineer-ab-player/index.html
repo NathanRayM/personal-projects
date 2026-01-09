@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/8b686cfbd0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Music Player</title>
+  </head>
+  <body>
+    <main class="player">
+      <div class="player__section">
+        <!-- A/B Control -->
+        <div class="player__ab-toggle">
+          <p><span class="player__ab-status">Mixed</span></p>
+          <div class="select__ab">
+            <div class="inner"></div>
+          </div>
+        </div>
+        <!-- Now Playing -->
+        <section class="player__now-playing">
+          <img
+            src="images/matt-clarkson-cover.png"
+            class="player__artwork"
+            alt="Album artwork"
+          />
+          <h1 class="player__title">Used To</h1>
+          <p class="player__artist">Matt Clarkson Band</p>
+        </section>
+
+        <!-- Transport Controls -->
+        <nav class="player__controls" aria-label="Playback controls">
+          <button id="previous" class="player__button player__button--previous">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button id="play" class="player__button player__button--play">
+            <i id="play-image" class="fa-solid fa-play"></i>
+          </button>
+          <button id="next" class="player__button player__button--next">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </nav>
+
+        <!-- Playback Progress -->
+        <section class="player__progress">
+          <div class="player__time">
+            <span class="player__time-current">0:00</span>
+            <span class="player__time-duration">3:45</span>
+          </div>
+          <input
+            id="progress"
+            class="player__progress-bar"
+            type="range"
+            min="0"
+            max="0"
+            value="0"
+            aria-label="Playback position"
+          />
+        </section>
+
+        <section id="playlist-button" class="player__playlist--button">
+          <i class="fa-regular fa-circle-down"></i>
+        </section>
+      </div>
+
+      <!-- Playlist -->
+      <aside class="player__playlist hidden">
+        <ul class="player__playlist-list">
+          <li id="song-0" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/matt-clarkson-cover.png"
+              alt="Used To"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Used To</span>
+                <span class="playlist-info-artist">Matt Clarkson Band</span>
+              </div>
+              <span class="player-info-duration">04:06</span>
+            </button>
+          </li>
+          <li id="song-1" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/celine-vong-cover.png"
+              alt="Atrophy"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Atrophy</span>
+                <span class="playlist-info-artist">Celine Vong</span>
+              </div>
+              <span class="player-info-duration">02:40</span>
+            </button>
+          </li>
+          <li id="song-2" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/constance-dees-cover.png"
+              alt="Colors"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Colors</span>
+                <span class="playlist-info-artist">Constance Dees</span>
+              </div>
+              <span class="player-info-duration">03:21</span>
+            </button>
+          </li>
+          <li id="song-3" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/sydney-andrea-cover.png"
+              alt="Lord Of all"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Lord Of All</span>
+                <span class="playlist-info-artist">Sydney Andrea</span>
+              </div>
+              <span class="player-info-duration">03:39</span>
+            </button>
+          </li>
+          <li id="song-4" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/brian-day-cover.png"
+              alt="Let's Dance"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Let's Dance</span>
+                <span class="playlist-info-artist">Brian Day</span>
+              </div>
+              <span class="player-info-duration">04:09</span>
+            </button>
+          </li>
+          <li id="song-5" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/a-the-kid-cover.png"
+              alt="Addiction"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Addiction</span>
+                <span class="playlist-info-artist">A The Kid</span>
+              </div>
+              <span class="player-info-duration">01:54</span>
+            </button>
+          </li>
+          <li id="song-6" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/k-nacole-cover.png"
+              alt="Show Me Love"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">Show Me Love</span>
+                <span class="playlist-info-artist">K Nacole</span>
+              </div>
+              <span class="player-info-duration">04:12</span>
+            </button>
+          </li>
+          <li id="song-7" class="player__playlist-item">
+            <img
+              class="playlist-image"
+              src="images/gabriel-day-cover.png"
+              alt="God's Will Be Done"
+            />
+            <button class="playlist__item--info">
+              <div class="playlist__item--left">
+                <span class="playlist-info-title">God's Will Be Done</span>
+                <span class="playlist-info-artist">Gabriel Day</span>
+              </div>
+              <span class="player-info-duration">05:02</span>
+            </button>
+          </li>
+        </ul>
+      </aside>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
