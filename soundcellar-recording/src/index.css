@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Pacifica Condensed Regular";
+  src: url("/src/assets/fonts/Pacifica\ Condensed\ Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*==== Reset ====*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+/*=== Main colors, shadows, and gradients ===*/
+:root {
+  --bg: #050505;
+  --bg-overlay-left: rgba(0, 0, 0, 0.9);
+  --bg-overlay-center: rgba(0, 0, 0, 0.45);
+  --bg-overlay-right: rgba(0, 0, 0, 0.88);
+  --bg-header-transparent: rgba(0, 0, 0, 0.7);
+  --services-bg: rgba(255, 255, 255, 0.015);
+  --services-border: rgba(197, 139, 66, 0.12);
+  --services-border-hover: rgba(197, 139, 66, 0.4);
+  --services-shadow: 0 0 20px rgba(197, 139, 66, 0.08),
+    0 10px 30px rgba(0, 0, 0, 0.35);
+  --text: #f7f7f7;
+  --headings: #e8e0d1;
+  --muted: rgba(255, 255, 255, 0.78);
+  --muted-two: rgba(255, 255, 255, 0.3);
+  --accent: #b9894f;
+  --text-gold: #c58b42;
+  --accent-soft: rgba(185, 137, 79, 0.35);
+  --card: rgba(8, 8, 8, 0.55);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  --contact-section-gradient: radial-gradient(
+      circle at 50% 50%,
+      rgba(197, 139, 66, 0.08) 0%,
+      rgba(10, 10, 10, 0) 60%
+    ),
+    #050505;
+}
+
+/*=== General Styles ===*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Pacifica Condensed Regular", "Bebas Neue", "Inter", sans-serif;
+  min-height: 100vh;
+
+  background-image: linear-gradient(
+      90deg,
+      var(--bg-overlay-left) 10%,
+      var(--bg-overlay-center) 50%,
+      var(--bg-overlay-right) 70%
+    ),
+    url(/src/assets/images/control-room-edit-three.png);
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Logo */
+
+.logo__container {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 1rem;
+}
+
+.logo__image {
+  width: 75px;
+}
+
+.logo__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.logo__span--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.logo__accent--line {
+  width: 1.5rem;
+  height: 1px;
+  background-color: rgba(197, 139, 66, 0.4);
+}
+
+.logo--title-top {
+  color: var(--muted);
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.logo--title-bottom {
+  color: var(--text-gold);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+/*test viewport width*/
+/* .header,
+.hero,
+.about,
+.services,
+.gear,
+.audio,
+.contact,
+.footer {
+  border: 2px solid red;
+} */
+
+/* KeyFrame Annimations */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .logo--title-top {
+    font-size: 1.2rem;
+  }
+
+  .logo--title-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 895px) {
+  body {
+    background-image: none;
+    background-color: var(--bg);
+  }
+  .logo__image {
+    width: 50px;
+  }
+
+  .logo--title-top {
+    font-size: 1rem;
+  }
+
+  .logo--title-bottom {
+    font-size: 0.5rem;
+  }
+
+  .logo__accent--line {
+    width: 1rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .logo__container {
+    gap: 0rem;
+  }
+
+  .logo__image {
+    width: 55px;
+    margin-right: 6px;
+  }
+
+  .logo--title-top {
+    font-size: 1rem;
+  }
+
+  .logo--title-bottom {
+    font-size: 0.8rem;
+  }
+}

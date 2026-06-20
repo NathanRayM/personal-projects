@@ -1,0 +1,244 @@
+.services {
+  display: flex;
+  padding: 6rem 1rem;
+  position: relative;
+  background: radial-gradient(
+      circle at top,
+      rgba(197, 139, 66, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(197, 139, 66, 0.06),
+      transparent 40%
+    ),
+    linear-gradient(to bottom, #070707, #040404);
+  overflow: hidden;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(rgba(197, 139, 66, 0.08), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.services__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services__label {
+  color: var(--text-gold);
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.services__info {
+  color: var(--headings);
+  text-align: center;
+  font-family: Bebas Neue;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  letter-spacing: 0.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.services___header--container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.services__decorative--line {
+  width: 4rem;
+  height: 1px;
+  background-color: rgba(197, 139, 66, 0.4);
+}
+
+.services__card {
+  display: flex;
+  padding: 0rem 1rem 2rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  background: var(--services-bg);
+  border: 1px solid var(--services-border);
+  backdrop-filter: blur(4px);
+  transition: all 0.35s ease;
+  cursor: pointer;
+  margin-bottom: 2.5rem;
+}
+
+.services__card:hover {
+  border-color: var(--services-border-hover);
+  transform: translateY(-6px);
+  box-shadow: var(--services-shadow);
+}
+
+.services__grid {
+  width: 70%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.services__icon {
+  width: 10rem;
+}
+
+.services__title {
+  text-align: center;
+  color: var(--headings);
+  font-family: Bebas Neue;
+  font-size: 1.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.services__description {
+  text-align: center;
+  color: var(--muted);
+  font-family: Inter;
+  margin-bottom: 1rem;
+}
+
+.services__rate {
+  text-align: center;
+  color: var(--text-gold);
+  font-family: Bebas Neue;
+  letter-spacing: 0.2rem;
+}
+
+.services__deposit--container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.services__deposit--image {
+  width: 2.5rem;
+}
+
+.services__deposit--info {
+  color: var(--muted);
+  font-family: Inter;
+}
+
+.services__contact--button {
+  border: 1px solid var(--text-gold);
+  padding: 0.5rem 1rem;
+  color: var(--text-gold);
+  letter-spacing: 0.12rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services__contact--button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .services__grid {
+    width: 90%;
+  }
+
+  .services__contact--button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 895px) {
+  .services {
+    justify-content: center;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 0;
+    margin-bottom: 4rem;
+  }
+
+  .services__card {
+    margin-bottom: 0rem;
+    width: 15rem;
+  }
+
+  .services__deposit--container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .services {
+    padding: 3rem 2rem;
+  }
+
+  .services__top {
+    width: 100%;
+  }
+
+  .services__info {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+
+  .services__decorative--line {
+    display: none;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+  }
+  .services__card {
+    flex-direction: row;
+    padding: 0rem;
+    width: 100%;
+  }
+
+  .services__card--info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .services__description {
+    text-align: left;
+  }
+
+  .services__deposit--info {
+    text-align: center;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    background: var(--bg);
+  }
+  .services__title {
+    font-size: 1.2rem;
+  }
+
+  .services__description {
+    font-size: 1rem;
+  }
+
+  .services__icon {
+    width: 7rem;
+  }
+
+  .services__rate {
+    text-align: left;
+  }
+}
